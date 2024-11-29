@@ -1,0 +1,151 @@
+/* Đặt các thuộc tính chung cho header */
+header {
+    background-color: #333; /* Màu nền của header */
+    padding: 10px 20px; /* Khoảng cách bên trong header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Căn chỉnh logo và menu điều hướng */
+    color: white;
+}
+
+/* Định dạng cho logo */
+header .logo img {
+    height: 50px; /* Chiều cao của logo */
+    width: auto; /* Tự động tính toán chiều rộng sao cho tỷ lệ logo không bị biến dạng */
+}
+
+/* Định dạng cho menu điều hướng */
+nav ul {
+    list-style: none; /* Loại bỏ các dấu chấm */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Hiển thị các mục menu theo hàng ngang */
+}
+
+/* Định dạng cho từng mục trong menu */
+nav ul li {
+    margin-right: 20px; /* Khoảng cách giữa các mục menu */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Loại bỏ khoảng cách bên phải mục cuối cùng */
+}
+
+/* Định dạng cho các liên kết trong menu */
+nav ul li a {
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: white; /* Màu chữ của liên kết */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+}
+
+/* Định dạng khi hover vào các liên kết */
+nav ul li a:hover {
+    color: #ff6347; /* Màu chữ khi hover */
+}
+
+/* Cải thiện kiểu header khi trên màn hình nhỏ (responsive) */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Chuyển các phần tử trong header thành cột */
+        align-items: flex-start; /* Căn chỉnh logo và menu về phía bên trái */
+    }
+
+    nav ul {
+        flex-direction: column; /* Các mục menu hiển thị theo chiều dọc */
+        width: 100%; /* Chiều rộng menu là 100% */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Khoảng cách giữa các mục menu */
+    }
+}
+
+
+
+
+/* Container chứa các sản phẩm */
+.product-container {
+    display: flex; /* Sắp xếp sản phẩm thành hàng ngang */
+    flex-wrap: wrap; /* Các sản phẩm tự động xuống dòng khi không đủ chỗ */
+    gap: 15px; /* Khoảng cách giữa các sản phẩm */
+    justify-content: center; /* Canh giữa các sản phẩm */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Giới hạn chiều rộng của toàn bộ danh sách sản phẩm */
+}
+
+/* Mỗi sản phẩm (card) */
+.product-card {
+    background-color: #fff; /* Nền trắng */
+    border: 1px solid #ddd; /* Viền nhạt */
+    border-radius: 10px; /* Bo góc */
+    overflow: hidden; /* Đảm bảo nội dung không vượt quá giới hạn */
+    width: 220px; /* Chiều rộng cố định cho mỗi sản phẩm */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    text-align: center; /* Căn giữa nội dung */
+    transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng mượt khi hover */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Nổi lên khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Đổ bóng rõ hơn */
+}
+
+/* Hình ảnh sản phẩm */
+.product-card img {
+    width: 100%; /* Chiều rộng đầy đủ */
+    height: auto; /* Tự động điều chỉnh chiều cao theo tỷ lệ */
+    border-bottom: 1px solid #ddd; /* Đường viền ngăn cách */
+}
+
+/* Thông tin sản phẩm */
+.product-info {
+    padding: 10px 15px;
+}
+
+.product-info h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Hiển thị tên sản phẩm trong một dòng */
+}
+
+.product-info .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e63946;
+    margin-top: 5px;
+}
+
+.product-info .original-price {
+    text-decoration: line-through;
+    font-size: 14px;
+    color: #999;
+    margin-left: 5px;
+}
+
+/* Nút mua */
+.buy-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #1d3557;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #457b9d;
+}

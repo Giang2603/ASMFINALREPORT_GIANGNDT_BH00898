@@ -1,0 +1,99 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Màu nền */
+    color: #fff;
+    display: flex; /* Sử dụng Flexbox để căn giữa */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100vh; /* Chiều cao toàn màn hình */
+    margin: 0;
+}
+
+/* Container chính cho form đăng ký */
+.auth-container {
+    width: 100%;
+    max-width: 400px; /* Độ rộng tối đa của form */
+    background-color: #1e1e1e; /* Màu nền của form */
+    border-radius: 10px; /* Bo góc */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+}
+
+/* Tiêu đề form */
+.auth-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ff5722; /* Màu nổi bật */
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #252525;
+    color: #fff;
+    font-size: 14px;
+}
+
+form input:focus {
+    border-color: #ff5722; /* Màu viền khi focus */
+    outline: none;
+}
+
+/* Nút đăng ký */
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-register {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+.btn-register:hover {
+    background-color: #e64a19;
+}
+
+/* Phần footer */
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #bbb;
+}
+
+.auth-footer a {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}

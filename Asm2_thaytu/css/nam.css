@@ -1,0 +1,121 @@
+/* Thiết lập cơ bản */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+}
+.navigation {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+/* Thiết kế chung cho nút */
+.navigation a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    min-width: 90px;
+}
+/* Liên kết điều hướng */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Khung sản phẩm */
+.product {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hình ảnh sản phẩm */
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+/* Tên sản phẩm */
+.product h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #007bff;
+    height: 50px; /* Đặt chiều cao cố định để đồng bộ */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Giá sản phẩm */
+.product p {
+    font-size: 14px;
+    color: #e63946;
+    font-weight: bold;
+}
+
+/* Nút thêm vào giỏ hàng */
+.product button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}
